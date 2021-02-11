@@ -1,8 +1,17 @@
-import vue from  "vue";
+import Vue from  "vue";
 
-var vm = new Vue({
-    el: "#test"
+var header = new Vue({
+    el: "#header"
   })
 
-  
+  var minicart = new Vue({
+    el: "#minicart"
+  })
+
+  var login = new Vue({
+    el: "#login"
+  })
+
+
+
 
