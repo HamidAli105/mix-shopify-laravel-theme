@@ -11,47 +11,12 @@
   - Home page only: only shows on the home page
 {%- endcomment -%}
 <section data-section-id="{{ section.id }}" data-section-type="header">
+ <header>
 
-  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        {% for link in linklists[section.settings.menu].links %}
-        {% if link.links != blank %}
-          <li class="nav-item">
-            <a href="{{ link.url }}" class="nav-link">
-              {{ link.title }}
-              {% include 'icon-arrow-down' %}
-            </a>
-            <ul>
-              {% for childlink in link.links %}
-                <li class="nav-item">
-                  <a href="{{ childlink.url }}" class="nav-link">
-                    {{ childlink.title }}
-                  </a>
-                </li>
-              {% endfor %}
-            </ul>
-          </li>
-        {% else %}
-          <li class="nav-item">
-            <a href="{{ link.url }}" class="nav-link">
-              {{ link.title }}
-            </a>
-          </li>
-        {% endif %}
-      {% endfor %}
-      </ul>
-    </div>
-  </nav> -->
- 
   {% include 'navbar'%}
+
+ </header>
+  
  
 </section>
 
@@ -108,12 +73,12 @@
       {
         "type": "range",
         "id": "logo_max_width",
-        "min": 50,
-        "max": 450,
-        "step": 10,
+        "min": 20,
+        "max": 200,
+        "step": 2,
         "unit": "px",
         "label": "Custom logo width",
-        "default": 250
+        "default": 100
       },
       {
         "type": "link_list",
