@@ -1,5 +1,15 @@
-<div class="container top-m">
-  {% paginate collection.products by 12 %}
+{% paginate collection.products by 12 %}
+
+{% assign productCount = collection.all_products_count | minus: paginate.current_offset %}
+
+<div class="{% section.settings.is_full_width %} container-fluid {% else %} container {% endif %} vh-100">
+ 
+    <header role="banner" class="d-flex align-item-center" style="min-height:{{section.settings.header_height}}px;">
+
+    </header>
+</div>
+  
+<div class="container">
   <header role="banner">
     <h1>{{ collection.title }}</h1>
     {% if collection.description != blank %}
